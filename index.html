@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <video autoplay muted loop id="myVideo" >
+        <source src="My Movie.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <div class="image-overlay" >
+        <img src="write-2.png" alt="Image 2">
+        <img src="worldwide-2.png" alt="Image 1">
+        <img src="mortarboard-2.png" alt="Image 3">
+    </div>
+
+    <div class="navbar" >
+        <a href="#" >Home</a>
+        <a href="#about">About Us</a>
+        <a href="#roadmap">Services</a>
+        <a href="#connect">Contact Us</a>
+    </div>
+    <div class="div2" id="about">
+        <div class="about-us">
+            <h1>OUR STORY</h1>
+            <p> Are you uncertain about how to begin your journey towards a master's degree? Seeking reliable and professional guidance for this significant step towards a brighter future?  </p> 
+            <p>We understand the challenges you may face as you embark on your journey toward a master's degree. Drawing from our own experiences, we have gained invaluable insights that could have simplified our processes had we known them earlier. Now, we are here to support you. Whether you're deciding on your university or navigating through your master's queries, we are committed to guiding you with the same care and dedication as a trusted mentor. We recognize the importance of accurate information, time, and effort required to complete your master's degree, and we are here to ensure your journey is as smooth and successful as possible.
+            </p>
+            <p>
+                Why choose us? Our team not only boasts significant achievements and a wealth of knowledge but, most importantly, possesses invaluable experience gained through real-life challenges encountered during our academic journeys. There is no better guide than those who have firsthand experience with the issues you are facing.
+                
+                We aim to provide comprehensive information and facilitate your process, recognizing the critical importance of overcoming obstacles and accessing reliable information. Trust us to be your committed guide, ensuring that your journey toward academic success is informed and smooth.</p>
+
+                
+        </div>
+    </div>
+   
+        <div class="roadmap" id="roadmap">
+
+            <h1>SUPPORT AND SERVICES</h1>
+            <div class="roadmap-content">
+                <div class="roadmap-box"><b>Profile Evaluation</b> </div>
+                <div class="roadmap-box"><b>Standardized Test Guidance</b> </div>
+                <div class="roadmap-box"><b>University Shortlisting</b> </div>
+                <div class="roadmap-box"><b>Application Assistance</b> </div>
+                <div class="roadmap-box"><b>Statement of Purpose(SOP) and Personal Statement Writing</b></div>
+                <div class="roadmap-box"><b>Letters of Recommendation (LORs)</b></div>
+                <div class="roadmap-box"><b>Visa Application Support</b> </div>
+                <div class="roadmap-box"><b>Pre-departure Orientation</b> </div>
+                <div class="roadmap-box"><b>Post Arrival and Networking</b> </div>
+                <div class="roadmap-box"><b>Career Advice and Internship Resources</b> </div>
+            </div>
+            
+
+            <h3>This roadmap is designed to expertly guide you through your journey. Encountering any challenges or require further assistance ? we are here to help. Please contact us for personalized guidance.</h3>
+           
+            <div class="roadmap-steps-container">
+            <div class="roadmap-step" data-hover-text="Step 1:&#10;Complete Necessary Standardized Tests &#10; &#10;- GRE &#10;- TOEFL &#10;- IELTS &#10;- DUOLINGO">
+                <div class="step-icon"><img src="exam.png" alt=""></div>
+                <div class="step-icon"></div>
+            </div>
+            <div class="roadmap-connector"></div>
+            <div class="roadmap-step" data-hover-text="Step 2:&#10;Shortlist Universities&#10;&#10;Determine your target universities by evaluating your test scores, academic performance, and scholarship availability.">
+                <div class="step-icon"><img src="skills.png" alt=""></div>
+                <div class="step-icon"></div>
+            </div>
+            <div class="roadmap-connector"></div>
+            <div class="roadmap-step" data-hover-text="Step 3:&#10;Prepare Supporting Documents&#10;&#10; Assemble your SOP, LOR,and Personal Statements. Tailoring these documents to reflect your unique profile is essential for enhancing your application.">
+                <div class="step-icon"><img src="sheet.png" alt=""></div>
+                <div class="step-icon"></div>
+            </div>
+            <div class="roadmap-connector"></div>
+            <div class="roadmap-step" data-hover-text="Step 4:&#10;Complete Your Application&#10;&#10;Submit your application with accurate details and proper supporting documents to ensure a seamless process. patiently await the university's decision.">
+                <div class="step-icon"><img src="submit.png" alt=""></div>
+            </div>
+            <div class="roadmap-connector"></div>
+            <div class="roadmap-step" data-hover-text="Step 5:&#10;Prepare for Visa Application&#10;&#10; Select your preferred Admits and begin the visa application process. Ensure all necessary documents are provided to facilitate successful visa approval.">
+                <div class="step-icon"><img src="visa.png" alt=""></div>
+                <div class="step-icon"></div>
+            </div>
+            <!-- Add more steps and connectors as needed -->
+        </div>
+        </div>
+    </div>
+
+
+    <div class="connect" id="connect">
+        <div class="connect-intro">
+            <h1>GET IN TOUCH</h1>
+            <p>Schedule your <b>FREE</b> introductory call to discuss your plans and explore how we can assist you.</p>
+        </div>
+        <div class="form-contact-wrapper">
+        <form class="contact-form" action="https://formspree.io/f/mbjnpwva" method="post">
+            <h2>Contact Us</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="First and Last" required>
+            <span class="message" id="name-message" style="color: red; display: none; font-size: x-small;"></span>
+        
+            <label for="phone">Phone Number:</label>
+            <div class="div3">
+            <input type="text" id="country-code" name="country_code" placeholder="+1" required>
+            </div>
+            <span class="message" id="country-code-message" style="color: red; display: none; font-size: x-small"></span>
+            <input type="tel" id="phone" name="phone" required>
+            <span class="message" id="phone-message" style="color: red; display: none; font-size: x-small;"></span>
+
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="message" id="email-message" style="color: red; display: none; font-size: x-small;"></span>
+        
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" placeholder="Type in your question or NA"  required></textarea>
+            <span class="message" id="question-message" style="color: red; display: none; font-size: x-small;"></span>
+        
+            <div class="input-group">
+                <label for="appointment-date">Preferred Date:</label>
+                <div class="date-time-group">
+                    <input type="date" id="appointment-date" name="appointment_date" required>
+                    <span class="message-inline" id="appointment-date-message" style="color: red; display: none; font-size: x-small;"></span>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="appointment-time">Preferred Time:</label>
+                <div class="date-time-group">
+                    <input type="time" id="appointment-time" name="appointment_time" required>
+                    <span class="message-inline" id="appointment-time-message" style="color: red; display: none; font-size: x-small;"></span>
+                </div>
+            </div>
+            
+
+        
+            <button type="submit" disabled>Submit</button>
+        </form>
+        
+        
+        <div class="vertical-divider"></div>
+        <div class="contact-info">
+            <h2>For More Queries</h2>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/grad.voyage" target="_blank">grad.voyage</a></p>
+            <p><strong>Email:</strong> gradvoyage.consulting@gmail.com</p>
+        </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2024 Grad Voyage Consulting. All rights reserved.</p>
+            <p>Follow us on <a href="https://www.instagram.com/grad.voyage" target="_blank">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

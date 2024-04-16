@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Application Journey Roadmap</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+        }
+        .roadmap-container {
+            position: relative;
+            width: 80%;
+            margin: -12 auto;
+            box-sizing: border-box; /* new line added */
+        }
+        .roadmap {
+            position: relative;
+            width: 100%;
+            padding: 80px 0; /* Increased padding for the vertical movement of circles */
+            box-sizing: border-box; /* new line added */
+        }
+        .milestone {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .milestone img {
+            width: 75%;
+            height: 75%;
+            object-fit: fill;
+        }
+        .tooltip {
+            visibility: hidden;
+            width: 140px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 3;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: visibility 0.2s, opacity 0.2s ease-in-out;
+            opacity: 0;
+            white-space: nowrap;
+        }
+        .milestone:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        /* SVG styling for the curve */
+        .curve {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Positioning milestones alternately up and down */
+        .milestone:nth-child(odd) {
+            top: 60px; /* Adjust as needed for up */
+        }
+        .milestone:nth-child(even) {
+            bottom: 40px; /* Adjust as needed for down */
+        }
+    </style>
+</head>
+<body>
+
+<div class="roadmap-container">
+    <!-- SVG to draw curved lines -->
+    <svg class="curve" viewBox="0 0 800 200" preserveAspectRatio="none">
+        <defs>
+            <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="-20" refY="30" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L6,3 L0,6 L1.5,3 z" fill="#333" />
+            </marker>
+        </defs>
+    
+        <!-- Original path -->
+        <path d="M0,100 Q100,0 200,100 T400,100 T600,100 T800,100"
+               stroke="#333" stroke-width="3" fill="none" />
+    
+               <path d="M0,110 Q100,10 200,110 T400,110 T600,110 T800,110"
+               stroke="#333" stroke-width="3" fill="none" stroke-dasharray="5,10" />
+
+        <path d="M0,120 Q100,20 200,120 T400,120 T600,120 T800,120"
+               stroke="#333" stroke-width="3" fill="none"
+               marker-mid="url(#arrow)" />
+    
+    </svg>
+    
+
+    <div class="roadmap">
+        <!-- Milestones here -->
+        <div class="milestone" style="left: -5%;">
+            <img src="exam.png" alt="Milestone 1" />
+            <div class="tooltip">GRE & IELTS</div>
+        </div>
+        <div class="milestone" style="left: 15%;">
+            <img src="skills.png" alt="Milestone 2" />
+            <div class="tooltip">SHORTLIST</div>
+        </div>
+        <div class="milestone" style="left: 35%;">
+            <img src="sheet.png" alt="Milestone 3" />
+            <div class="tooltip">SOP LOR</div>
+        </div>
+        <div class="milestone" style="left: 55%;">
+            <img src="submit.png" alt="Milestone 4" />
+            <div class="tooltip">APPLY</div>
+        </div>
+        <div class="milestone" style="left: 75%;"> <!-- Changed to right: 0; -->
+            <img src="visa.png" alt="Milestone 5" />
+            <div class="tooltip">VISA</div>
+        </div>
+        <div class="milestone" style="left: 95%;"> <!-- Changed to right: 0; -->
+            
+            <div class="tooltip">MASTERS</div>
+        </div>
+        <!-- More milestones here -->
+    </div>
+</div>
+
+</body>
+</html>
