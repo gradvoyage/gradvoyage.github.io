@@ -348,9 +348,13 @@ img {
         width: auto; /* Adjust width */
     }
 
+    .img{
+        width: 10px;
+    }
+
     .roadmap-step {
         width: 10px; /* Smaller steps */
-        height: 100px;
+        height: 10px;
     }
 
     .roadmap-steps-container {
@@ -367,6 +371,6 @@ img {
     }
 
     h1, h2, h3 {
-        font-size: 24px; /* Smaller headers for mobile */
+        font-size: 12px; /* Smaller headers for mobile */
     }
 }
