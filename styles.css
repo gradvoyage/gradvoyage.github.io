@@ -206,7 +206,7 @@ img {
     padding: 5%;
     display: fixed;
     padding-top: 0%;
-    width: 20%;
+    width: 25%;
     height: 600px;
     background: white;
     font-size: large;
@@ -225,9 +225,10 @@ img {
 }
 
 .contact-info {
-    flex: 0.5;
+    flex: 0.6;
     align-self: center;
     padding: 20px;
+    width: 40px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -256,7 +257,7 @@ img {
 
 .contact-form button {
     width: 50%; /* Larger button for easier clicking on mobile */
-    margin:40px auto; /* Center button */
+    margin:40px 80px; /* Center button */
     padding: 10px 0;
 }
 
@@ -325,17 +326,54 @@ img {
 
 
 @media (max-width: 768px) {
+
     #myVideo {
-        display: none; /* Optionally hide the video on small devices */
+        position: relative; /* Change from fixed to relative positioning on mobile */
+        width: 100%; /* Ensure it takes the full width of the viewport */
+        height: auto; /* Adjust height to maintain aspect ratio */
+        z-index: -1; /* Keep it behind other content if needed */
+    }
+    /* Roadmap Steps Adjustments */
+    .roadmap-steps-container .roadmap-step, /* Increase specificity */
+    .roadmap-steps-container .roadmap-step img.step-icon { /* Specific for image icons */
+        width: 40px; /* Set a smaller width for mobile */
+        height: 40px; /* Set a smaller height for mobile */
+        padding: 20px;
     }
 
-    .image-overlay img {
-        height: 20px; /* Smaller icons for mobile */
-        width: 20px;
+    .image-overlay{
+        margin-top: 55px;
     }
+
+    img{
+        width: 60px;
+    }
+
+    .roadmap-step:hover::after {
+        content: attr(data-hover-text);
+        position: absolute;
+        top: -75%;
+        left: 50%;
+        background-color: black;
+        width: 80px;
+        height: 90px;
+        font-size: 6px;
+     
+    }
+
+   
+    .roadmap-steps-container .roadmap-step .step-icon {
+        font-size:12px; /* Smaller text size for icons within the roadmap steps */
+    }
+
+    /* Adjustments for any general icons used elsewhere */
+   
+
+    /* Ensuring other mobile adjustments are specific enough */
+   
 
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         padding: 5px 0;
     }
 
@@ -344,48 +382,54 @@ img {
     }
 
     .about-us, .roadmap, .connect, .contact-info, .contact-form {
-        margin: 10px; /* Reduce margins */
-        padding: 10px; /* Reduce padding */
-        width: auto; /* Adjust width */
-    }
-
-    .roadmap-step {
-        width: 80px; /* Further reduced size for steps */
-        height: 80px; /* Matching height for uniformity */
-    }
-
-    .roadmap-step .step-icon {
-        font-size: 16px; /* Smaller icon font size */
-    }
-
-    img.step-icon { /* Specific for image icons if they exist */
-        width: 30px; /* Smaller width for icons */
-        height: 30px; /* Smaller height for icons */
-    }
-
-    .roadmap-steps-container {
-        flex-direction: column; /* Stack steps vertically */
+        margin: 10px;
+        padding: 10px;
+        width: auto;
     }
 
     .contact-form, .contact-info {
-        width: 90%; /* Make the form and contact info take almost full width */
-        margin: 10px auto; /* Center the form and contact info */
+        width: 90%;
+        margin: 10px auto;
+        height: auto;
     }
 
     .vertical-divider {
-        display: none; /* Remove the vertical divider on mobile */
+        display: none;
     }
 
     .form-contact-wrapper {
-        flex-direction: column; /* Stack form and contact info vertically */
-        align-items: center; /* Center align the children */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form button {
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px 0;
+        display: block;
     }
 
     body {
-        font-size: 14px; /* Smaller font size for mobile */
+        font-size: 12px;
     }
 
     h1, h2, h3 {
-        font-size: 16px; /* Smaller headers for mobile */
+        font-size: 20px;
+    }
+
+    .roadmap h3{
+        font-size: 12px;
+    }
+    .connect h1{
+        font-size: 30px;
+    }
+
+    .roadmap h1{
+        font-size: 30px;
+    }
+
+    .about-us h1{
+        font-size: 30px;
     }
 }
+
