@@ -137,4 +137,23 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle hover content
+    function toggleHoverContent() {
+        // Check if the screen width is less than or equal to 1024px
+        if (window.innerWidth <= 1024) {
+            this.classList.toggle('active-hover');
+        }
+    }
+
+    // Select all roadmap steps
+    const roadmapSteps = document.querySelectorAll('.roadmap-step');
+
+    roadmapSteps.forEach(step => {
+        // Add click event listener to each step
+        step.addEventListener('click', toggleHoverContent);
+    });
+});
+
+
 

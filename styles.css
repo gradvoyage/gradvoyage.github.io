@@ -17,7 +17,7 @@ body {
 .image-overlay {
     position: absolute;
     top: 0; /* Aligns the container at the top of the page */
-    margin-top: 13%;
+    margin-top: 11%;
     width: 100%; /* Spans the full width of the viewport */
     text-align: center; /* Centers the images horizontally */
     z-index: 1; /* Ensures the images stay on top of the video */
@@ -167,6 +167,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: x-large;
     background-color: #333;
     position: fixed; /* Ensures the navbar stays fixed at the top */
     top: 0; /* Aligns the navbar at the top of the viewport */
@@ -330,6 +331,7 @@ img {
 
 @media (max-width: 468px) {
 
+
     #myVideo {
         position: relative; /* Change from fixed to relative positioning on mobile */
         width: 100%;
@@ -362,7 +364,7 @@ img {
     }
 
     .image-overlay{
-        margin-top: 55px;
+        margin-top: 45px;
     }
 
     img{
@@ -404,6 +406,7 @@ img {
     .navbar {
         flex-direction: row;
         padding: 5px 0;
+        font-size: small;
     }
 
     .navbar a {
@@ -440,6 +443,7 @@ img {
 
     body {
         font-size: 12px;
+        position: absolute;
     }
 
     h1, h2, h3 {
@@ -538,6 +542,7 @@ img {
     .navbar {
         flex-direction: row;
         padding: 5px 0;
+        font-size: large;
     }
 
     .navbar a {
@@ -575,6 +580,7 @@ img {
 
     body {
         font-size: 14px; /* Suitable for reading on tablets */
+        position: absolute;
     }
 
     h1, h2, h3 {

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body >
@@ -103,7 +105,7 @@
         
             <label for="phone">Phone Number:</label>
             <div class="div3">
-            <input type="text" id="country-code" name="country_code" placeholder="+1" required>
+                <input type="text" id="country-code" name="country_code" placeholder="+1" value="+" oninput="if(this.value.charAt(0) !== '+') { this.value = '+' + this.value.replace(/[^\d]/g, ''); } else { this.value = '+' + this.value.slice(1).replace(/[^\d]/g, ''); }" required>
             </div>
             <span class="message" id="country-code-message" style="color: red; display: none; font-size: x-small"></span>
             <input type="tel" id="phone" name="phone" required>
@@ -143,8 +145,13 @@
         <div class="vertical-divider"></div>
         <div class="contact-info">
             <h2>For More Queries</h2>
-            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/grad.voyage" target="_blank">grad.voyage</a></p>
-            <p><strong>Email:</strong> gradvoyage.consulting@gmail.com</p>
+            <p><a href="https://www.instagram.com/grad.voyage" target="_blank"><img src="instagram.png" alt="Instagram" style="height:20px;width: 20px;display:inline-block; margin-left: 125px;margin-bottom: -5px;"></a> <a href="https://www.instagram.com/grad.voyage" ><strong>@grad.voyage</strong></a> </p>
+
+
+
+
+            <p><a href="mailto:gradvoyage.consulting@gmail.com?subject=Inquiry&body=Hi%20there," target="_blank"><img src="gmail.png" alt="Instagram" style="height:20px;width: 20px;display:inline-block; margin-left: 40px;margin-bottom: -5px;"></a> <a href="mailto:gradvoyage.consulting@gmail.com?subject=Inquiry&body=Hi%20there," ><strong>gradvoyage.consulting@gmail.com</strong></a> </p>
+
         </div>
         </div>
     </div>
