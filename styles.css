@@ -1,13 +1,15 @@
 body {
     font-family: 'Roboto Mono', monospace;
+    position: absolute;
+
 }
 
 #myVideo {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 99.5vw;
+    height: 90vh;
     object-fit: cover; /* Ensures video covers the screen without distortion */
     z-index: -1;
 }
@@ -166,12 +168,11 @@ img {
     justify-content: center;
     align-items: center;
     background-color: #333;
-    position: fixed;
-    font-size: larger;
-    top: 0;
+    position: fixed; /* Ensures the navbar stays fixed at the top */
+    top: 0; /* Aligns the navbar at the top of the viewport */
     left: 0;
-    width: 100%;
-    z-index: 1000;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Keeps it above other content */
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
@@ -304,9 +305,11 @@ img {
     color: #fff; /* White text color */
     text-align: center; /* Center aligns the text */
     height: 100%;
+    width: auto;
     margin-top: 20px; /* Adds space between the content and the footer */
     margin-left: -20px;
     margin-right: -10px;
+    
 }
 
 .footer-content p {
@@ -378,6 +381,10 @@ img {
      
     }
 
+
+    .roadmap-step.active-hover::after {
+        display: block;
+    }
     .roadmap-steps-container {
         flex-direction: row; /* Stack steps vertically on small screens */
         align-items: center; /* Center alignment of steps */
@@ -454,6 +461,11 @@ img {
     .about-us h1{
         font-size: 20px;
     }
+
+    .contact-info p{
+        margin-left:-30px;
+        font-size: smaller;
+    }
 }
 
 /* Styles for devices between 768px and 1024px wide, typical of iPads */
@@ -517,6 +529,10 @@ img {
         height: 100px;
         font-size: 9px;
      
+    }
+
+    .roadmap-step.active-hover::after {
+        display: block;
     }
 
     .navbar {
