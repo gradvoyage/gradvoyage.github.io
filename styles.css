@@ -344,15 +344,6 @@ img {
         font-size: 36px; /* Smaller font size for headings on small screens */
     }
 
-    .roadmap-box, .contact-form, .contact-info {
-        width: 90%; /* Full width for smaller screens */
-        margin: 10px auto; /* Center align */
-    }
-
-    .form-contact-wrapper {
-        flex-direction: column; /* Stacks form and contact info vertically on small screens */
-    }
-
     .contact-form, .contact-info {
         width: 100%; /* Makes each take full width */
         margin: 10px 0; /* Adds space between stacked elements */
