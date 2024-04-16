@@ -322,7 +322,8 @@ img {
     text-decoration: underline; /* Underlines links on hover for better interaction visibility */
 }
 
-/* Mobile Responsiveness */
+
+
 @media (max-width: 768px) {
     #myVideo {
         display: none; /* Optionally hide the video on small devices */
@@ -367,8 +368,17 @@ img {
     }
 
     .contact-form, .contact-info {
-        width: 90%; /* Make the form take almost full width */
-        margin: 10px auto; /* Center the form */
+        width: 90%; /* Make the form and contact info take almost full width */
+        margin: 10px auto; /* Center the form and contact info */
+    }
+
+    .vertical-divider {
+        display: none; /* Remove the vertical divider on mobile */
+    }
+
+    .form-contact-wrapper {
+        flex-direction: column; /* Stack form and contact info vertically */
+        align-items: center; /* Center align the children */
     }
 
     body {
@@ -376,6 +386,6 @@ img {
     }
 
     h1, h2, h3 {
-        font-size: 24px; /* Smaller headers for mobile */
+        font-size: 16px; /* Smaller headers for mobile */
     }
 }
