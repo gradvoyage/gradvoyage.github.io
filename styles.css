@@ -348,13 +348,18 @@ img {
         width: auto; /* Adjust width */
     }
 
-    .img{
-        width: 10px;
+    .roadmap-step {
+        width: 80px; /* Further reduced size for steps */
+        height: 80px; /* Matching height for uniformity */
     }
 
-    .roadmap-step {
-        width: 10px; /* Smaller steps */
-        height: 10px;
+    .roadmap-step .step-icon {
+        font-size: 16px; /* Smaller icon font size */
+    }
+
+    img.step-icon { /* Specific for image icons if they exist */
+        width: 30px; /* Smaller width for icons */
+        height: 30px; /* Smaller height for icons */
     }
 
     .roadmap-steps-container {
@@ -371,6 +376,6 @@ img {
     }
 
     h1, h2, h3 {
-        font-size: 12px; /* Smaller headers for mobile */
+        font-size: 24px; /* Smaller headers for mobile */
     }
 }
