@@ -332,24 +332,3 @@ img {
     text-decoration: underline; /* Underlines links on hover for better interaction visibility */
 }
 
-
-
-@media (max-width: 768px) {
-    .about-us, .roadmap, .connect {
-        padding: 20px; /* Adds padding for smaller screens */
-        text-align: center; /* Centers text for better readability */
-    }
-
-    .about-us h1, .roadmap h1, .connect h1 {
-        font-size: 36px; /* Smaller font size for headings on small screens */
-    }
-
-    .contact-form, .contact-info {
-        width: 100%; /* Makes each take full width */
-        margin: 10px 0; /* Adds space between stacked elements */
-    }
-
-    .roadmap-steps-container {
-        flex-direction: column; /* Stacks roadmap steps vertically */
-    }
-}
