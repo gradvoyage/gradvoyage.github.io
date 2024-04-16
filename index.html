@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body >
-    <video autoplay muted loop id="myVideo" >
+    <video autoplay muted loop id="myVideo" playsinline>
         <source src="My Movie.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
@@ -96,7 +96,7 @@
         </div>
         <div class="form-contact-wrapper">
         <form class="contact-form" action="https://formspree.io/f/mbjnpwva" method="post">
-            <h2>Contact Us</h2>
+            <h2>Fill in your details</h2>
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" placeholder="First and Last" required>
             <span class="message" id="name-message" style="color: red; display: none; font-size: x-small;"></span>

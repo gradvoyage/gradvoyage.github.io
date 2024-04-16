@@ -329,16 +329,33 @@ img {
 
     #myVideo {
         position: relative; /* Change from fixed to relative positioning on mobile */
-        width: 100%; /* Ensure it takes the full width of the viewport */
+        width: 100%;
+        padding-top: 10px; /* Ensure it takes the full width of the viewport */
         height: auto; /* Adjust height to maintain aspect ratio */
         z-index: -1; /* Keep it behind other content if needed */
     }
-    /* Roadmap Steps Adjustments */
-    .roadmap-steps-container .roadmap-step, /* Increase specificity */
-    .roadmap-steps-container .roadmap-step img.step-icon { /* Specific for image icons */
-        width: 40px; /* Set a smaller width for mobile */
-        height: 40px; /* Set a smaller height for mobile */
-        padding: 20px;
+    .roadmap-steps-container .roadmap-step,
+    .roadmap-steps-container .roadmap-step img.step-icon {
+        width: 40px; /* Reduced width for mobile */
+        height: 40px; /* Reduced height for mobile */
+        margin: 1px; /* Space around */
+    }
+
+
+
+    .image-overlay {
+        position: absolute;
+        top: -15px;  /* Adjust if needed, was 55px which might cover the video */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .image-overlay img {
+        height: 20px; /* Adjusted size for mobile */
+        width: 20px; /* Adjusted size for mobile */
+        margin: 5px; /* Smaller margin */
     }
 
     .image-overlay{
@@ -346,19 +363,24 @@ img {
     }
 
     img{
-        width: 60px;
+        width: 30px;
     }
 
     .roadmap-step:hover::after {
         content: attr(data-hover-text);
         position: absolute;
-        top: -75%;
+        top: -145%;
         left: 50%;
         background-color: black;
         width: 80px;
         height: 90px;
         font-size: 6px;
      
+    }
+
+    .roadmap-steps-container {
+        flex-direction: row; /* Stack steps vertically on small screens */
+        align-items: center; /* Center alignment of steps */
     }
 
    
@@ -418,18 +440,19 @@ img {
     }
 
     .roadmap h3{
+        margin-top: 20px;
         font-size: 12px;
     }
     .connect h1{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .roadmap h1{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .about-us h1{
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
