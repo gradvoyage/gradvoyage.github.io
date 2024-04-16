@@ -349,7 +349,7 @@ img {
     }
 
     .roadmap-step {
-        width: 100px; /* Smaller steps */
+        width: 10px; /* Smaller steps */
         height: 100px;
     }
 
