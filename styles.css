@@ -325,7 +325,7 @@ img {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 468px) {
 
     #myVideo {
         position: relative; /* Change from fixed to relative positioning on mobile */
@@ -345,7 +345,7 @@ img {
 
     .image-overlay {
         position: absolute;
-        top: -15px;  /* Adjust if needed, was 55px which might cover the video */
+        top: -12px;  /* Adjust if needed, was 55px which might cover the video */
         left: 0;
         width: 100%;
         text-align: center;
@@ -372,8 +372,8 @@ img {
         top: -145%;
         left: 50%;
         background-color: black;
-        width: 80px;
-        height: 90px;
+        width: 100px;
+        height: 80px;
         font-size: 6px;
      
     }
@@ -455,4 +455,133 @@ img {
         font-size: 20px;
     }
 }
+
+/* Styles for devices between 768px and 1024px wide, typical of iPads */
+@media (min-width: 468px) and (max-width: 1024px) {
+    #myVideo {
+        position: relative;
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        z-index: -1; /* Keep it behind other content */
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: -8px;  /* Adjust as needed */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    img{
+        width: 46px;
+    }
+
+    .image-overlay img {
+        height: 25px; /* Intermediate size for larger mobile devices */
+        width: 25px;
+        margin: 10px;
+    }
+
+    .roadmap-steps-container {
+        flex-direction: row; /* Maintain a horizontal layout */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .roadmap-steps-container .roadmap-step,
+    .roadmap-steps-container .roadmap-step img.step-icon {
+        width: 60px; /* Slightly larger than mobile, but smaller than desktop */
+        height: 60px;
+        margin: 10px;
+    }
+
+    .roadmap-step {
+        width: 120px; /* Adjusted for better visibility on iPads */
+        height: 120px;
+        margin: 20px auto; /* Ensure adequate spacing */
+    }
+
+    .roadmap-step .step-icon {
+        font-size: 14px; /* Slightly larger font size */
+    }
+
+    .roadmap-step:hover::after {
+        content: attr(data-hover-text);
+        position: absolute;
+        top: -105%;
+        left: 50%;
+        background-color: black;
+        width: 200px;
+        height: 100px;
+        font-size: 9px;
+     
+    }
+
+    .navbar {
+        flex-direction: row;
+        padding: 5px 0;
+    }
+
+    .navbar a {
+        padding: 5px 5px;
+    }
+
+    .about-us, .roadmap, .connect, .contact-info, .contact-form {
+        margin: 10px;
+        padding: 10px;
+        width: auto;
+    }
+
+    .contact-form, .contact-info {
+        width: auto;
+        margin: 10px auto;
+        height: auto;
+    }
+
+   .vertical-divider {
+        display: none;
+    }
+
+
+    .form-contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form button {
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px 0;
+        display: block;
+    }
+
+    body {
+        font-size: 14px; /* Suitable for reading on tablets */
+    }
+
+    h1, h2, h3 {
+        font-size: 24px; /* Enhanced visibility for headings */
+    }
+
+
+
+    .roadmap h3{
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    .connect h1{
+        font-size: 30px;
+    }
+
+    .roadmap h1{
+        font-size: 30px;
+    }
+
+    .about-us h1{
+        font-size: 30px;
+    }
+}
+
 
